@@ -26,7 +26,7 @@
             colors: {
               clifford: "#da373d",
               "primary-color": "#E76F51",
-              "bg-bike-color": "rgba(231, 111, 81, 0.10)",
+              "bike-color": "rgba(231, 111, 81, 0.10)",
             },
           },
         },
@@ -48,7 +48,7 @@
 
   <body class="font-poppins">
     <header class="md:container md:mx-auto">
-      <nav>
+      <nav class="mb-5">
         <div class="navbar bg-base-100">
           <div class="flex-1">
             <div class="dropdown">
@@ -94,9 +94,9 @@
         </div>
       </nav>
       <!-- Slider or carousel -->
-      <div class="carousel w-full lg:h-[550px] py-24">
+      <div class="carousel w-full lg:h-[550px] py-24 bg-bike-color">
         <!-- slide 1 -->
-        <div id="slide1" class="carousel-item relative w-full bg-bike-color">
+        <div id="slide1" class="carousel-item relative w-full">
           <div class="flex flex-col lg:flex-row gap-20 p-4 lg:p-20">
             <div class="space-y-7 flex-1">
               <h2 class="text-2xl lg:text-6xl font-bold">
@@ -200,19 +200,23 @@
     <main class="md:container md:mx-auto">
       <!-- Features Bikes -->
       <section>
-        <h3 class="text-center text-5xl font-semibold m-20">
+        <h3 class="text-center text-3xl lg:text-5xl font-semibold m-20">
           Fetured Bikes In This Year
         </h3>
-        <div class="grid p-8 gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          <div><img src="images/others/feature-bike.png" alt="" /></div>
-          <div><img src="images/others/feature-bike.png" alt="" /></div>
-          <div><img src="images/others/feature-bike.png" alt="" /></div>
+        <div
+          class="grid mx-auto p-8 gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+        >
+          <img src="images/others/feature-bike.png" alt="" />
+          <img src="images/others/feature-bike.png" alt="" />
+          <img src="images/others/feature-bike.png" alt="" />
         </div>
       </section>
 
       <!-- Latest News -->
       <section>
-        <h3 class="text-center text-5xl font-semibold m-20">latest News</h3>
+        <h3 class="text-center text-4xl lg:text-5xl font-semibold m-20">
+          latest News
+        </h3>
         <div class="grid p-5 gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <!-- First card -->
           <div class="card bg-base-100 shadow-xl">
@@ -259,12 +263,12 @@
         </div>
       </section>
       <!-- Happy clients -->
-      <section class="py24">
-        <h3 class="text-center text-5xl font-semibold m-20">
+      <section class="p-8">
+        <h3 class="text-center text-3xl lg:text-5xl font-semibold m-20">
           Happy <span class="text-primary-color">Clients Says</span>
         </h3>
 
-        <div class="grid gap-11 p-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div class="grid gap-11 p-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <!-- First client review -->
           <div class="card card-compact bg-base-100 border border-gray-300 p-5">
             <figure>
@@ -407,7 +411,7 @@
       </section>
       <!-- FAQ -->
       <section class="py24">
-        <h3 class="text-center text-5xl font-semibold m-20">
+        <h3 class="text-center text-3xl lg:text-5xl font-semibold m-20">
           Frequently Asked <span class="text-primary-color">Questions</span>
         </h3>
         <!-- Hero daisy -->
@@ -421,7 +425,7 @@
               <!-- First Question -->
               <div class="collapse collapse-arrow">
                 <input type="radio" name="my-accordion-2" checked="checked" />
-                <div class="collapse-title text-xl font-medium">
+                <div class="collapse-title text-xl lg:font-medium">
                   What are the most important things I should know about riding
                   a bike?
                 </div>
@@ -437,7 +441,7 @@
               <!-- Second Question -->
               <div class="collapse collapse-arrow">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">
+                <div class="collapse-title text-xl lg:font-medium">
                   How can I tell if my helmet is old and I need a new one?
                 </div>
                 <div class="collapse-content">
@@ -450,7 +454,7 @@
               <!-- Third question -->
               <div class="collapse collapse-arrow">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">
+                <div class="collapse-title text-xl lg:font-medium">
                   My bike has been in storage is it safe to ride?
                 </div>
                 <div class="collapse-content">
@@ -462,7 +466,7 @@
               </div>
               <div class="collapse collapse-arrow">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">
+                <div class="collapse-title text-xl lg:font-medium">
                   What rules should I follow when riding my bike?
                 </div>
                 <div class="collapse-content">
@@ -477,22 +481,31 @@
         </div>
       </section>
     </main>
-    <footer class="flex gap-20 px-24 py-16 bg-neutral text-neutral-content">
-      <div>
-        <nav class="flex-1">
-          <header class="footer-title">Company</header>
-          <a class="link link-hover">About us</a>
-          <a class="link link-hover">Contact</a>
-          <a class="link link-hover">Jobs</a>
-          <a class="link link-hover">Press kit</a>
-        </nav>
-      </div>
-      <div class="flex-1">
+    <footer
+      class="flex gap-20 px-24 m-auto py-16 bg-neutral text-neutral-content"
+    >
+      <div class="flex-1 w-1/2">
         <nav>
-          <header class="footer-title">Legal</header>
-          <a class="link link-hover">Terms of use</a>
-          <a class="link link-hover">Privacy policy</a>
-          <a class="link link-hover">Cookie policy</a>
+          <header class=" text-lg flex "><p>Download Now</p>
+            <p class="ml-8">License</p>
+          </header>
+          <br><br>
+          <div>
+            <a class="link link-hover mr-6">About</a>
+            <a class="link link-hover mr-6">Features</a>
+            <a class="link link-hover mr-6">Pricing</a>
+            <a class="link link-hover mr-6">Careers</a>
+            <a class="link link-hover mr-6">Help</a>
+            <a class="link link-hover">Privacy Policy</a>
+          </div>
+        </nav>
+        <p class="pt-10">© 2020 bike. All rights reserved</p>
+      </div>
+      <div>
+        <nav>
+          <header class="pb-4 text-xl">Get the App</header>
+          <img class="w-3/4 mb-4" src="images/others/ios.png" alt="">
+          <img class="w-3/4" src="images/others/android.png" alt="">
         </nav>
       </div>
     </footer>
